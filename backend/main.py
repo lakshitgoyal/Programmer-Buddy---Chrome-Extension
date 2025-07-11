@@ -15,9 +15,17 @@ except Exception as e:
 
 app = FastAPI()
 
+origins = [
+    "https://leetcode.com",
+    "https://www.leetcode.com",
+    "https://codeforces.com",
+    "https://www.codeforces.com",
+    "https://www.codechef.com",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], 
+    allow_origins=origins, 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
