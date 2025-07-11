@@ -76,7 +76,7 @@ async function getHintFromBackend() {
     addMessageToChat("Thinking...", "ai");
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/get-hint", {
+        const response = await fetch("https://programmer-buddy.onrender.com", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
