@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Student Buddy",
+  "version": "1.0",
+  "description": "Helps you think through coding problems without giving away the solution.",
+  "permissions": [
+    "storage" 
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://leetcode.com/problems/*",
+        "*://www.codechef.com/problems/*",
+        "*://codeforces.com/problemset/problem/*"
+      ],
+      "css": ["style.css"],
+      "js": ["content.js"]
+    }
+  ]
+}
